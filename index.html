@@ -1,100 +1,153 @@
-
 <html>
 <head>
     <title>Как играть в дурака</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f5f5dc;
-            color: #333;
+            color: #1a3a1a; 
+            min-height: 100vh;
+        }
+        header {
+            background-color: #a8e6a8; 
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #8b0000;
-            text-align: center;
+            color: #1a3a1a;
+            margin: 0;
+            font-size: 2.5em;
         }
         h2 {
-            color: #8b0000;
-            border-bottom: 2px solid #8b0000;
+            color: #1a3a1a;
+            border-bottom: 2px solid #1a3a1a;
             padding-bottom: 5px;
+            margin-top: 30px;
         }
-        .card-image {
-            width: 300px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card-image-left {
+            width: 350px;
+            float: left;
+            margin: 0 30px 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            shape-outside: margin-box;
+        }
+        .card-image-right {
+            width: 350px;
+            float: right;
+            margin: 0 0 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            shape-outside: margin-box;
+        }
+        .card-image-center {
+            width: 400px;
             display: block;
-            margin: 20px auto;
+            margin: 30px auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .rules {
             background-color: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 30px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: justify;
+            overflow: hidden;
         }
         ol {
             padding-left: 25px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
         .highlight {
             font-weight: bold;
-            color: #8b0000;
+            color: #1a3a1a;
+            background-color: #e8f5e9;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1a3a1a;
         }
     </style>
 </head>
 <body>
-    <h1>Всем привет, сегодня вас научат играть в дурака!</h1>
+    <header>
+        <h1>Всем привет, сегодня вас научат играть в дурака!</h1>
+    </header>
     
-    <img src="https://i.pinimg.com/736x/17/49/88/174988b1ff5451b075fdae22b50fa165.jpg" alt="Карты для игры в дурака" class="card-image">
-    
-    <div class="rules">
-        <h2>Основные правила игры в дурака</h2>
+    <div class="container">
+        <div class="rules clearfix">
+            <img src="https://i.pinimg.com/736x/17/49/88/174988b1ff5451b075fdae22b50fa165.jpg" alt="Карты для игры в дурака" class="card-image-right">
+            
+            <h2>Основные правила игры в дурака</h2>
+            
+            <p>Игра в дурака - популярная карточная игра, в которую играют колодой из 36 карт. Вот основные правила:</p>
+            
+            <ol>
+                <li>В игре участвуют от 2 до 6 игроков</li>
+                <li>Каждому игроку раздается по 6 карт</li>
+                <li>Козырная масть определяется случайным образом</li>
+                <li>Цель игры - избавиться от всех своих карт раньше других</li>
+                <li>Последний оставшийся с картами игрок становится "дураком"</li>
+            </ol>
+        </div>
         
-        <p>Игра в дурака - популярная карточная игра, в которую играют колодой из 36 карт. Вот основные правила:</p>
+        <div class="rules clearfix">
+            <img src="https://images.genius.com/efa4c4d9f3c9386e3a9fae8b95702256.1000x1000x1.jpg" alt="Пример игры в дурака" class="card-image-left">
+            
+            <h2>Как ходить и отбиваться</h2>
+            
+            <ol>
+                <li>Первый ход делает игрок с младшим козырем</li>
+                <li>Можно ходить одной или несколькими картами одного достоинства</li>
+                <li>Отбивающийся должен покрыть каждую карту старшей картой той же масти или козырем</li>
+                <li>Если игрок не может отбиться, он забирает все карты</li>
+                <li>После каждого кона игроки добирают карты из колоды до 6</li>
+            </ol>
+            
+            <p class="highlight">Важно: Козырь бьет любую карту других мастей!</p>
+        </div>
         
-        <ol>
-            <li>В игре участвуют от 2 до 6 игроков</li>
-            <li>Каждому игроку раздается по 6 карт</li>
-            <li>Козырная масть определяется случайным образом</li>
-            <li>Цель игры - избавиться от всех своих карт раньше других</li>
-            <li>Последний оставшийся с картами игрок становится "дураком"</li>
-        </ol>
+        <div class="rules">
+            <h2>Виды игры в дурака</h2>
+            
+            <ol>
+                <li><strong>Подкидной дурак</strong> - классический вариант, где можно подкидывать карты того же достоинства</li>
+                <li><strong>Переводной дурак</strong> - можно переводить ход следующему игроку</li>
+                <li><strong>Японский дурак</strong> - с особыми правилами подкидывания карт</li>
+                <li><strong>Дурак с прикупом</strong> - с дополнительными картами на столе</li>
+            </ol>
+            
+            <img src="https://i.pinimg.com/736x/e0/ec/0f/e0ec0f690127a1de376750733c8e4b57.jpg" alt="Игра в дурака" class="card-image-center">
+        </div>
     </div>
     
-    <div class="rules">
-        <h2>Как ходить и отбиваться</h2>
-        
-        <img src="https://images.genius.com/efa4c4d9f3c9386e3a9fae8b95702256.1000x1000x1.jpg" alt="Пример игры в дурака" class="card-image">
-        
-        <ol>
-            <li>Первый ход делает игрок с младшим козырем</li>
-            <li>Можно ходить одной или несколькими картами одного достоинства</li>
-            <li>Отбивающийся должен покрыть каждую карту старшей картой той же масти или козырем</li>
-            <li>Если игрок не может отбиться, он забирает все карты</li>
-            <li>После каждого кона игроки добирают карты из колоды до 6</li>
-        </ol>
-        
-        <p class="highlight">Важно: Козырь бьет любую карту других мастей!</p>
-    </div>
-    
-    <div class="rules">
-        <h2>Виды игры в дурака</h2>
-        
-        <ol>
-            <li><strong>Подкидной дурак</strong> - классический вариант, где можно подкидывать карты того же достоинства</li>
-            <li><strong>Переводной дурак</strong> - можно переводить ход следующему игроку</li>
-            <li><strong>Японский дурак</strong> - с особыми правилами подкидывания карт</li>
-            <li><strong>Дурак с прикупом</strong> - с дополнительными картами на столе</li>
-        </ol>
-    </div>
-    
-    <div style="text-align: center; margin-top: 30px;">
-        <p>Теперь вы готовы играть! Возьмите колоду карт и начинайте тренироваться.</p>
-        <p>Удачи за игровым столом!</p>
+    <div class="footer">
+        Ура, теперь вы умеете играть в дурака!
     </div>
 </body>
 </html>
